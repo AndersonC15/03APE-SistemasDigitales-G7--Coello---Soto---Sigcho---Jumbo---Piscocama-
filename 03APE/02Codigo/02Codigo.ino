@@ -3,7 +3,7 @@ const uint8_t PIN_LED = 19; // LED de latido
 // Hz: frecuencia deseada. Probar 100, 1000 y 5000
 const uint32_t FREC_SENAL = 100;
 // Factor 2: cada alarma es medio periodo de la señal
-const uint64_t ALARMA_US = 1000000 / (2 * FREC_SENAL);
+const uint64_t ALARMA_US = 10000 / (2 * FREC_SENAL);
 hw_timer_t *timer = NULL; // "manija" del temporizador reservado
 volatile bool nivel = false; // nivel actual del pin de señal
 volatile uint32_t cambios = 0; // cuántas veces cambió el pin
